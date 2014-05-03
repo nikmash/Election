@@ -28,8 +28,8 @@ public class MainFrame extends JFrame {
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                 voterID voterID = new voterID("Nikhil");
-                 voterID.ID = voter.CLAconn(voterID);
+                voterID voterID = new voterID("Nikhil");
+                voterID.ID = voter.CLAconn(voterID);
             }
         });
 

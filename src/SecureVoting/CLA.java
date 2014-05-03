@@ -23,6 +23,7 @@ public class CLA {
         return sslsocket;
     }
 
+
     public static void main (String[] args){
         HashMap<voterID, String> validnumbers = new HashMap<voterID, String>();
         HashMap<String, String> trusteduser = new HashMap<String, String>();
@@ -51,8 +52,6 @@ public class CLA {
                 OutputStream outputCTF = socketCTF.getOutputStream();
                 OutputStreamWriter outputCTFwriter = new OutputStreamWriter(outputCTF);
                 BufferedWriter CTFwriter = new BufferedWriter(outputCTFwriter);
-
-
 
             }
 
