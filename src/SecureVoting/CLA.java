@@ -1,5 +1,7 @@
 package SecureVoting;
 
+import jBCrypt.BCrypt;
+
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSocket;
@@ -23,14 +25,20 @@ public class CLA {
         return sslsocket;
     }
 
-
     public static void main (String[] args){
         HashMap<voterID, String> validnumbers = new HashMap<voterID, String>();
         HashMap<String, String> trusteduser = new HashMap<String, String>();
 
+        String user = "Nikhil";
+        String pass = "123456";
+
+        String hashed = BCrypt.hashpw(pass, BCrypt.gensalt());
+
+        trusteduser.put(user, hashed);
 
         try{
 
+            SSLSocket socketCTF = initiateServerConnection(24560);
             SSLSocket serversocketVoter = initiateServerConnection(25640);
 
             ObjectInputStream objectin = new ObjectInputStream(serversocketVoter.getInputStream());
@@ -39,27 +47,41 @@ public class CLA {
             OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);
             BufferedWriter bufferedwriter = new BufferedWriter(outputstreamwriter);
 
-            voterID voterID = (voterID)objectin.readObject();
+            voterID voterID = null;
+            while((voterID = (voterID)objectin.readObject()) != null){
 
-            if(validnumbers.get(voterID) == null){
-                String validation = nextSessionID();
-                validnumbers.put(voterID, validation);
-                bufferedwriter.write(validation);
-                bufferedwriter.flush();
+                System.out.println(voterID.user);
+                System.out.println(voterID.pass);
 
-                SSLSocket socketCTF = initiateServerConnection(24560);
+                if(BCrypt.checkpw(voterID.pass, trusteduser.get(voterID.user))){
+                    if(validnumbers.containsKey(voterID)){
+                            bufferedwriter.write("USER HAS ALREADY REQUESTED VALIDATION NUMBER");
+                            bufferedwriter.flush();
 
-                OutputStream outputCTF = socketCTF.getOutputStream();
-                OutputStreamWriter outputCTFwriter = new OutputStreamWriter(outputCTF);
-                BufferedWriter CTFwriter = new BufferedWriter(outputCTFwriter);
+                    }
+                    else{
+                        System.out.println("FUCK YEAH");
+                        String validation = nextSessionID();
+                        validnumbers.put(voterID, validation);
+                        System.out.println("VALIDAITON NUMBER " + validation);
+                        bufferedwriter.write(validation + '\n');
+                        bufferedwriter.flush();
+
+                        OutputStream outputCTF = socketCTF.getOutputStream();
+                        OutputStreamWriter outputCTFwriter = new OutputStreamWriter(outputCTF);
+                        BufferedWriter CTFwriter = new BufferedWriter(outputCTFwriter);
+                        System.out.println("FUCK YEAH 2");
+                    }
+
+                }
+                else{
+                    bufferedwriter.write("INVALID USERNAME/PASSWORD");
+                    bufferedwriter.flush();
+                }
+            System.out.println("FUCK YEAH 3");
+
 
             }
-
-            else{
-                bufferedwriter.write("You have already voted.");
-                bufferedwriter.flush();
-            }
-
 
         } catch (Exception e){
             e.printStackTrace();
