@@ -9,10 +9,13 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.HashMap;
 
 public class voter {
 	
 	public static JFrame frame;
+
+    public static HashMap<String, String> results;
 
     private static SecureRandom random = new SecureRandom();
 
@@ -45,36 +48,31 @@ public class voter {
 		panel.add(loginButton);
 		
 		loginButton.addActionListener(new ActionListener() {
-			 
-            public void actionPerformed(ActionEvent e)
-            {
+
+            public void actionPerformed(ActionEvent e) {
                 //Execute when button is pressed
 
 
-
                 String validID = CLAconn(new voterID(userText.getText(), new String(passwordText.getPassword())));
-                System.out.println("THIS IS WHAT CAME BACK" + validID);
+                System.out.println("THIS IS WHAT CAME BACK " + validID);
 
-                if(validID.equals("USER HAS ALREADY REQUESTED VALIDATION NUMBER")){
+                if (validID.equals("USER HAS ALREADY REQUESTED VALIDATION NUMBER")) {
                     System.out.println("USER HAS ALREADY REQUESTED VALIDATION NUMBER");
                     //print in GUI
 
-                }
-                else if(validID.equals("INVALID USERNAME/PASSWORD")){
+                } else if (validID.equals("INVALID USERNAME/PASSWORD")) {
                     System.out.println("INVALID USERNAME/PASSWORD");
                     //print in GUI
-                }
-                else if(!validID.equals("00000000")){
+                } else if (!validID.equals("00000000")) {
                     System.out.println("LOGGED IN");
                     String idnum = nextSessionID();
-                    JFrame frame2 = new loggedin("ohyeah", validID, idnum);
+                    JFrame frame2 = new loggedin("ohyeah", idnum, validID);
                     frame2.setSize(300, 150);
                     frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                     frame.setVisible(false);
                     frame2.setVisible(true);
-                }
-                else{
+                } else {
                     System.out.println("VALIDATION FAILED");
                 }
 
@@ -100,7 +98,6 @@ public class voter {
 
             System.out.println("wtf");
             validation = bufferedreader.readLine();
-            System.out.println("HERE IS VALIDATION NUMBER "+ validation);
             sslsocket.close();
 
         } catch (Exception e){
@@ -111,29 +108,35 @@ public class voter {
     }
 
     public static String CTFconn(String voted, String validation, String idnum, int option){
-
         try{
             SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
             SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", 23333);
-
 
             if(option == 1){
                 OutputStream outputstream = sslsocket.getOutputStream();
                 OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);
                 BufferedWriter bufferedwriter = new BufferedWriter(outputstreamwriter);
 
-                bufferedwriter.write(idnum + " " + validation + " " + voted);
+                System.out.println(idnum + " " + validation + " " + voted);
+                bufferedwriter.write(idnum + " " + validation + " " + voted + '\n');
                 bufferedwriter.flush();
             }
 
             if(option == 2){
+                OutputStream outputstream = sslsocket.getOutputStream();
+                OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);
+                BufferedWriter bufferedwriter = new BufferedWriter(outputstreamwriter);
+
+                bufferedwriter.write("SENDTABLE" + '\n');
+                bufferedwriter.flush();
+
                 ObjectInputStream objectIn = new ObjectInputStream(sslsocket.getInputStream());
+                results = (HashMap<String, String>) objectIn.readObject();
 
-
-
+                //HERE IS THE RESULTS
 
             }
-
+            sslsocket.close();
 
 
         } catch (Exception e){

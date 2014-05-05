@@ -40,6 +40,7 @@ public class loggedin extends JFrame{
             {
                 //Execute when button is pressed
                 CTFconn(comboBox.getSelectedItem().toString(), validation, idnum, 1);
+                //RESULTS HASHMAP HAS RESULTS!!
             	
             }
         });  

@@ -8,10 +8,16 @@ import javax.net.ssl.SSLSocketFactory;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class CTF {
+
+    public static HashMap<String, String> validation = new HashMap<String, String>();
+    public static HashMap<String, String> results = new HashMap<String, String>();
+
+
 
     private static SSLSocket initiateServerSocket(int port) throws Exception{
         SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
@@ -59,6 +65,8 @@ public class CTF {
             String string = null;
             while((string = bufferedreader.readLine()) != null){
                  if(string.equals("SENDTABLE")){
+                     ObjectOutputStream objectout = new ObjectOutputStream(serversocketVoter.getOutputStream());
+                     objectout.writeObject(results);
 
                  }
 
@@ -72,6 +80,7 @@ public class CTF {
                          if(validation.get(validnum) == null){
                              validation.put(validnum, idnum);
                              results.put(idnum, voted);
+                             System.out.println(idnum + " " + voted);
                          }
                          else{
 
@@ -91,12 +100,31 @@ public class CTF {
     }
 
     public static void main(String[] args){
-        HashMap<String, String> validation = new HashMap<String, String>();
-        HashMap<String, String> results = new HashMap<String, String>();
 
-        thread1 thread = new thread1();
-        Thread j = new Thread(thread);
-        j.start();
+        SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+        SSLServerSocket serversocketVoter = null;
+
+
+        try{
+
+
+            //System.setProperty("Djavax.net.ssl.keyStore", "myserverkeystore");
+            //System.setProperty("Djavax.net.ssl.keyStorePassword", "123456");
+            serversocketVoter = (SSLServerSocket) sslserversocketfactory.createServerSocket(23333);
+
+            while(true){
+                thread1 thread = new thread1();
+                thread.start();
+                SSLSocket socketVoter = (SSLSocket) serversocketVoter.accept();
+                System.out.println("FUCK YEAH BLAH");
+                voterThread voterthread = new voterThread(socketVoter);
+                voterthread.start();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
 
 
         //CLAconn(24560, validation);
