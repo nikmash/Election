@@ -101,6 +101,7 @@ public class voter {
             System.out.println("wtf");
             validation = bufferedreader.readLine();
             System.out.println("HERE IS VALIDATION NUMBER "+ validation);
+            sslsocket.close();
 
         } catch (Exception e){
             e.printStackTrace();

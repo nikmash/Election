@@ -21,6 +21,8 @@ public class CTF {
     }
 
     private static SSLSocket initiateClientSocket(int port) throws Exception{
+        System.setProperty("Djavax.net.ssl.trustStore", "myserverkeystore");
+        System.setProperty("Djavax.net.ssl.trustStorePassword", "123456");
         SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
         SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", port);
         return sslsocket;
@@ -35,9 +37,10 @@ public class CTF {
             BufferedReader bufferedreader = new BufferedReader(inputstreamreader);
 
             String validnum = null;
-            validnum = bufferedreader.readLine();
-            validation.put(validnum, null);
-
+            while((validnum = bufferedreader.readLine()) != null){
+                System.out.println(validation);
+                validation.put(validnum, null);
+            }
 
         } catch(Exception e){
             e.printStackTrace();
@@ -91,8 +94,13 @@ public class CTF {
         HashMap<String, String> validation = new HashMap<String, String>();
         HashMap<String, String> results = new HashMap<String, String>();
 
-        CLAconn(24560, validation);
-        voter(23333, validation, results);
+        thread1 thread = new thread1();
+        Thread j = new Thread(thread);
+        j.start();
+
+
+        //CLAconn(24560, validation);
+        //voter(23333, validation, results);
 
     }
 

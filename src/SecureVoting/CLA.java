@@ -67,9 +67,14 @@ public class CLA {
                         bufferedwriter.write(validation + '\n');
                         bufferedwriter.flush();
 
+
+
                         OutputStream outputCTF = socketCTF.getOutputStream();
                         OutputStreamWriter outputCTFwriter = new OutputStreamWriter(outputCTF);
                         BufferedWriter CTFwriter = new BufferedWriter(outputCTFwriter);
+                        CTFwriter.write(validation);
+                        CTFwriter.flush();
+
                         System.out.println("FUCK YEAH 2");
                     }
 

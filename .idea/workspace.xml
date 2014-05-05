@@ -2,29 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3172633e-a6ce-482b-8758-79c2c49b2c11" name="Default" comment="Updated (Still Work in Progress)">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SecureVoting/CLAHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SecureVoting/CLA.java" afterPath="$PROJECT_DIR$/src/SecureVoting/CLA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SecureVoting/CTF.java" afterPath="$PROJECT_DIR$/src/SecureVoting/CTF.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SecureVoting/voter.java" afterPath="$PROJECT_DIR$/src/SecureVoting/voter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SecureVoting/voterID.java" afterPath="$PROJECT_DIR$/src/SecureVoting/voterID.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Election.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/voter.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399259379257" ignored="false" />
-    <file path="/fragment.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399260760041" ignored="false" />
+    <file path="/voter.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399274985539" ignored="false" />
+    <file path="/fragment.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399266224291" ignored="false" />
     <file path="/MainFrame.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399170279935" ignored="false" />
     <file path="/client.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1398977079461" ignored="false" />
     <file path="/server.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1398976961570" ignored="false" />
-    <file path="/CLA.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399259088575" ignored="false" />
+    <file path="/CLA.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399274277397" ignored="false" />
     <file path="/voterID.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399242231902" ignored="false" />
     <file path="/ObjectInputStream.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1398989654024" ignored="false" />
     <file path="/Dummy.txt" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399244797390" ignored="false" />
-    <file path="/CTF.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399260647554" ignored="false" />
+    <file path="/CTF.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399266218861" ignored="false" />
     <file path="/PBKDF.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399242727775" ignored="false" />
     <file path="/SCryptUtil.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399242755354" ignored="false" />
     <file path="/SCrypt.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399243218313" ignored="false" />
     <file path="/BCrypt.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399245737522" ignored="false" />
     <file path="/TestBCrypt.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399244290185" ignored="false" />
     <file path="/loggedin.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399251201001" ignored="false" />
+    <file path="/thread1.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399274576208" ignored="false" />
+    <file path="/CLAHandler.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399271890142" ignored="false" />
+    <file path="/thread2.java" changelist="3172633e-a6ce-482b-8758-79c2c49b2c11" time="1399274079276" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,22 +91,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="voterID.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="voterID.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/SecureVoting/voterID.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="13" selection-start="117" selection-end="134" vertical-scroll-proportion="0.13353115">
+                <state line="6" column="13" selection-start="117" selection-end="134" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="voter.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="voter.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/SecureVoting/voter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="96" column="34" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="6" column="30" selection-start="147" selection-end="147" vertical-scroll-proportion="0.13615733">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -129,15 +131,33 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="CTF.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="CTF.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/SecureVoting/CTF.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="37" selection-start="1494" selection-end="1544" vertical-scroll-proportion="0.6369138">
+                <state line="30" column="81" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3289#3305#0" expanded="true" />
-                    <element signature="e#3362#3378#0" expanded="true" />
+                    <element signature="e#3523#3539#0" expanded="true" />
+                    <element signature="e#3596#3612#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Thread.class" pinned="false" current="false" current-in-tab="false">
+            <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Thread.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="228" column="0" selection-start="8702" selection-end="8702" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="thread1.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/SecureVoting/thread1.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="46" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.6008902">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -145,8 +165,11 @@
           <file leaf-file-name="CLA.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/SecureVoting/CLA.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="50" column="0" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="54" column="20" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#974#991#0" expanded="true" />
+                    <element signature="e#1052#1068#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -171,9 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/vote/CTF.java" />
-        <option value="$PROJECT_DIR$/src/vote/CLA.java" />
-        <option value="$PROJECT_DIR$/src/election/CTF.java" />
         <option value="$PROJECT_DIR$/src/SecureVoting/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/SecureVoting/voterID.java" />
         <option value="$PROJECT_DIR$/src/scrypt/crypto/PBKDF.java" />
@@ -184,9 +204,12 @@
         <option value="$PROJECT_DIR$/src/jBCrypt/TestBCrypt.java" />
         <option value="$PROJECT_DIR$/src/jBCrypt/BCrypt.java" />
         <option value="$PROJECT_DIR$/src/SecureVoting/loggedin.java" />
-        <option value="$PROJECT_DIR$/src/SecureVoting/voter.java" />
-        <option value="$PROJECT_DIR$/src/SecureVoting/CLA.java" />
         <option value="$PROJECT_DIR$/src/SecureVoting/CTF.java" />
+        <option value="$PROJECT_DIR$/src/SecureVoting/CLAHandler.java" />
+        <option value="$PROJECT_DIR$/src/SecureVoting/thread2.java" />
+        <option value="$PROJECT_DIR$/src/SecureVoting/CLA.java" />
+        <option value="$PROJECT_DIR$/src/SecureVoting/thread1.java" />
+        <option value="$PROJECT_DIR$/src/SecureVoting/voter.java" />
       </list>
     </option>
   </component>
@@ -406,7 +429,7 @@
     <configuration default="false" name="Voter" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SecureVoting.voter" />
-      <option name="VM_PARAMETERS" value="-Djavax.net.ssl.trustStore=myserverkeystore -Djavax.net.ssl.trustStorePassword=123456" />
+      <option name="VM_PARAMETERS" value="-Djavax.net.ssl.trustStore=myserverkeystore -Djavax.net.ssl.trustStorePassword=123456 " />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -440,7 +463,7 @@
     <configuration default="false" name="CTF" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SecureVoting.CTF" />
-      <option name="VM_PARAMETERS" value="-Djavax.net.ssl.trustStore=myserverkeystore -Djavax.net.ssl.trustStorePassword=123456 -Djavax.net.ssl.keyStore=myserverkeystore -Djavax.net.ssl.keyStorePassword=123456" />
+      <option name="VM_PARAMETERS" value="-Djavax.net.ssl.trustStore=myserverkeystore -Djavax.net.ssl.trustStorePassword=123456 " />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -502,7 +525,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="995" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.4934066" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -511,7 +534,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19771428" sideWeight="0.15208112" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19771428" sideWeight="0.18729989" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.112280704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -522,8 +545,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11686233" sideWeight="0.80228573" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19771428" sideWeight="0.84418356" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11686233" sideWeight="0.80228573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19771428" sideWeight="0.8089648" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24953096" sideWeight="0.5923483" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -592,37 +615,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SecureVoting/CLA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecureVoting/voterID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecureVoting/CTF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3289#3305#0" expanded="true" />
-            <element signature="e#3362#3378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecureVoting/voter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -666,37 +662,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecureVoting/voter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="34" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SecureVoting/voterID.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="117" selection-end="134" vertical-scroll-proportion="0.13353115">
+        <state line="6" column="13" selection-start="117" selection-end="134" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SecureVoting/CLA.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/ObjectInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0">
+        <state line="348" column="0" selection-start="15668" selection-end="15668" vertical-scroll-proportion="0.37821484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecureVoting/CLAHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Thread.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="0" selection-start="8702" selection-end="8702" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SecureVoting/CTF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1494" selection-end="1544" vertical-scroll-proportion="0.6369138">
+        <state line="30" column="81" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3289#3305#0" expanded="true" />
-            <element signature="e#3362#3378#0" expanded="true" />
+            <element signature="e#3523#3539#0" expanded="true" />
+            <element signature="e#3596#3612#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecureVoting/CLA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="20" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#974#991#0" expanded="true" />
+            <element signature="e#1052#1068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecureVoting/thread1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.6008902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SecureVoting/voter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="30" selection-start="147" selection-end="147" vertical-scroll-proportion="0.13615733">
+          <folding />
         </state>
       </provider>
     </entry>
