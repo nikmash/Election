@@ -2,6 +2,8 @@ package SecureVoting;
 
 import java.io.Serializable;
 
+//Voter Identification Object Stores User, Pass, and validation number.
+
 public class voterID implements Serializable {
     String user;
     String pass;

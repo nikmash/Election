@@ -7,6 +7,8 @@ import java.io.*;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
+//Thread for CLA starting connections between voter and CTF. All ServerSocket SSL connections.
+
 public class thread2 extends Thread{
 
 	private static SecureRandom random = new SecureRandom();

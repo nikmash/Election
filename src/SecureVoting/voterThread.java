@@ -4,7 +4,10 @@ package SecureVoting;
 import javax.net.ssl.SSLSocket;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 import java.util.StringTokenizer;
+
+//Thread to connect voter connections to the CTF.
 
 public class voterThread extends Thread{
     private SSLSocket socket;
@@ -19,11 +22,13 @@ public class voterThread extends Thread{
 
              String string = null;
 
-             System.out.println("FUCK YEAH");
              if((string = Voterin.readLine()) != null){
-                System.out.println("FUCK YEAH 2");
                 if(string.equals("SENDTABLE")){
-                    //SEND TABLE
+
+                    System.out.println("sending the table");
+                    ObjectOutputStream objectout = new ObjectOutputStream(socket.getOutputStream());
+                    objectout.writeObject(CTF.results);
+                    objectout.writeObject(CTF.validation);
                 }
                 else{
                     StringTokenizer st = new StringTokenizer(string);
@@ -36,6 +41,7 @@ public class voterThread extends Thread{
                             CTF.validation.put(validnum, idnum);
                             CTF.results.put(idnum, voted);
                             System.out.println("Your id is " + idnum + " you voted for " + voted);
+
                         }
                         else{
 

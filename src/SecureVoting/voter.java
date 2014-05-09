@@ -11,11 +11,15 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.HashMap;
 
+//Initial voter J-Frame and also execution of voter connection to the CLA then the CTF
+//Threads are not needed because connections are temporary.
+
 public class voter {
 	
 	public static JFrame frame;
 
     public static HashMap<String, String> results;
+    public static HashMap<String, String> validID;
 
     private static SecureRandom random = new SecureRandom();
 
@@ -58,13 +62,16 @@ public class voter {
 
                 if (validID.equals("USER HAS ALREADY REQUESTED VALIDATION NUMBER")) {
                     System.out.println("USER HAS ALREADY REQUESTED VALIDATION NUMBER");
+                    JOptionPane.showMessageDialog(frame, "USER HAS ALREADY REQUESTED VALIDATION NUMBER");
                     //print in GUI
 
                 } else if (validID.equals("INVALID USERNAME/PASSWORD")) {
-                    System.out.println("INVALID USERNAME/PASSWORD");
+
+                    JOptionPane.showMessageDialog(frame, "INVALID USERNAME/PASSWORD");
                     //print in GUI
                 } else if (!validID.equals("00000000")) {
                     System.out.println("LOGGED IN");
+                    JOptionPane.showMessageDialog(frame, "LOGGED IN");
                     String idnum = nextSessionID();
                     JFrame frame2 = new loggedin("ohyeah", idnum, validID);
                     frame2.setSize(300, 150);
@@ -74,6 +81,8 @@ public class voter {
                     frame2.setVisible(true);
                 } else {
                     System.out.println("VALIDATION FAILED");
+                    JOptionPane.showMessageDialog(frame, "VALIDATION FAILED");
+
                 }
 
             }
@@ -113,16 +122,20 @@ public class voter {
             SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", 23333);
 
             if(option == 1){
+
                 OutputStream outputstream = sslsocket.getOutputStream();
                 OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);
                 BufferedWriter bufferedwriter = new BufferedWriter(outputstreamwriter);
 
                 System.out.println(idnum + " " + validation + " " + voted);
+                JOptionPane.showMessageDialog(frame, "This is your id number: " + idnum);
+
                 bufferedwriter.write(idnum + " " + validation + " " + voted + '\n');
                 bufferedwriter.flush();
             }
 
             if(option == 2){
+
                 OutputStream outputstream = sslsocket.getOutputStream();
                 OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);
                 BufferedWriter bufferedwriter = new BufferedWriter(outputstreamwriter);
@@ -131,7 +144,10 @@ public class voter {
                 bufferedwriter.flush();
 
                 ObjectInputStream objectIn = new ObjectInputStream(sslsocket.getInputStream());
-                results = (HashMap<String, String>) objectIn.readObject();
+                results = (HashMap <String, String>) objectIn.readObject();
+                validID = (HashMap<String, String>) objectIn.readObject();
+
+
 
                 //HERE IS THE RESULTS
 

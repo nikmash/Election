@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 
 import static SecureVoting.voter.CTFconn;
 
+//J Frame Pane for Logging In
+
 public class loggedin extends JFrame{
 
 	public static JFrame frame;
@@ -46,7 +48,7 @@ public class loggedin extends JFrame{
         });  
 		
 		
-		JButton logoutbutton = new JButton("Logout");
+		JButton logoutbutton = new JButton("Check Results");
 		logoutbutton.setBounds(180, 80, 80, 25);
 		panel.add(logoutbutton);
 		logoutbutton.addActionListener(new ActionListener() {
@@ -54,7 +56,14 @@ public class loggedin extends JFrame{
             public void actionPerformed(ActionEvent e)
             {
                 //Execute when button is pressed
-            	
+                CTFconn("", "", "", 2);
+
+                JFrame frame2 = new results("ohyeah");
+                frame2.setSize(400, 800);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                frame2.setVisible(true);
+
             }
         });  
 

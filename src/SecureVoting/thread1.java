@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+//Thread for CTF initiating a connection to voters through SSL
+
 public class thread1 extends Thread{
     private SSLSocket clientsocketCLA;
 
@@ -28,7 +30,6 @@ public class thread1 extends Thread{
             String validnum = null;
 
             while((validnum = bufferedreader.readLine()) != null){
-                System.out.println("COME HERE");
                 System.out.println("VALIDATION NUMBER " + validnum);
                 CTF.validation.put(validnum, null);
             }
